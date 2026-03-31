@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P.S. Thakur — Cricket Profile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ 
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+ 
+<!-- NAVBAR -->
+<header>
+  <a href="#" class="logo">
+    <div class="logo-ball">PST</div>
+    <div class="logo-text">P.S. <span>Thakur</span></div>
+  </a>
+  <nav>
+    <a href="#" class="active">Home</a>
+    <a href="#batting">Batting</a>
+    <a href="#bowling">Bowling</a>
+    <a href="#fielding">Fielding</a>
+    <a href="#matches">Matches</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="nav-right">
+    <a href="https://cricheroes.com/player-profile/32203638/p.s-thakur/matches" target="_blank" class="cricheroes-btn">
+      🏏 CricHeroes
+    </a>
+    <button class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+  </div>
+</header>
+ 
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#" onclick="toggleMenu()">Home</a>
+  <a href="#batting" onclick="toggleMenu()">Batting</a>
+  <a href="#bowling" onclick="toggleMenu()">Bowling</a>
+  <a href="#fielding" onclick="toggleMenu()">Fielding</a>
+  <a href="#matches" onclick="toggleMenu()">Matches</a>
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+</div>
+ 
+<!-- SYNC BAR -->
+<div id="syncBar">
+  <div class="sync-dot"></div>
+  CricHeroes se <span>auto-sync</span> active hai
+  <span class="last-sync" id="lastSyncTime">Sync ho raha hai...</span>
+</div>
+ 
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero" id="home">
+  <div class="cricket-bg-text">CRICKET</div>
+  <div class="hero-left fade-up">
+    <div class="hero-tag">🏏 CricHeroes Verified Player</div>
+    <h1 class="hero-name">P.S.<br/><span>Thakur</span></h1>
+    <div class="hero-role" id="heroRole">Fast Bowler · All Rounder</div>
+    <p class="hero-desc">
+      Priyanshu Singh Thakur — ek passionate cricketer jo apni fast bowling aur aggressive batting se maidan mein apni alag pehchaan banata hai. Faridabad se, CricHeroes pe active.
+    </p>
+    <div class="hero-btns">
+      <a href="https://cricheroes.com/player-profile/32203638/p.s-thakur/matches" target="_blank" class="btn-primary">🏏 CricHeroes Profile</a>
+      <a href="#matches" class="btn-outline">📊 Match History</a>
+    </div>
+  </div>
+  <div class="hero-right fade-up" style="transition-delay:0.2s">
+    <div class="profile-card">
+      <div class="profile-card-top">
+        <div class="profile-avatar">PST</div>
+        <h3>P.S. Thakur</h3>
+        <p>Faridabad, Haryana</p>
+        <div class="role-badges">
+          <span class="role-badge" id="badge1">Fast Bowler</span>
+          <span class="role-badge" id="badge2">Right-hand Bat</span>
+          <span class="role-badge">Playing since 2024</span>
+        </div>
+      </div>
+      <div class="profile-quick-stats">
+        <div class="qstat"><div class="val" id="qs-matches">—</div><div class="lbl">Matches</div></div>
+        <div class="qstat"><div class="val" id="qs-runs">—</div><div class="lbl">Runs</div></div>
+        <div class="qstat"><div class="val" id="qs-wickets">—</div><div class="lbl">Wickets</div></div>
+        <div class="qstat"><div class="val" id="qs-avg">—</div><div class="lbl">Bat Avg</div></div>
+        <div class="qstat"><div class="val" id="qs-econ">—</div><div class="lbl">Economy</div></div>
+        <div class="qstat"><div class="val" id="qs-catches">—</div><div class="lbl">Catches</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ═══════════ BATTING ═══════════ -->
+<section id="batting">
+  <h2 class="section-heading fade-up">Batting <span>Stats</span></h2>
+  <div class="stats-grid fade-up">
+    <div class="stat-card"><div class="val" id="b-innings">0</div><div class="lbl">Innings</div></div>
+    <div class="stat-card"><div class="val" id="b-runs">0</div><div class="lbl">Total Runs</div></div>
+    <div class="stat-card"><div class="val gold" id="b-hs">0</div><div class="lbl">High Score</div></div>
+    <div class="stat-card"><div class="val" id="b-avg">0.0</div><div class="lbl">Average</div></div>
+    <div class="stat-card"><div class="val" id="b-sr">0.0</div><div class="lbl">Strike Rate</div></div>
+    <div class="stat-card"><div class="val" id="b-50s">0</div><div class="lbl">50s</div></div>
+    <div class="stat-card"><div class="val gold" id="b-fours">0</div><div class="lbl">Fours (4s)</div></div>
+    <div class="stat-card"><div class="val gold" id="b-sixes">0</div><div class="lbl">Sixes (6s)</div></div>
+  </div>
+  <div class="batting-grid fade-up">
+    <div class="progress-block">
+      <div class="prog-row">
+        <div class="prog-label"><span>Boundary % (runs from 4s & 6s)</span><span id="bdry-pct">0%</span></div>
+        <div class="prog-bar"><div class="prog-fill gold" id="bdry-fill" style="width:0%"></div></div>
+      </div>
+      <div class="prog-row">
+        <div class="prog-label"><span>Dot Ball %</span><span id="dot-pct">0%</span></div>
+        <div class="prog-bar"><div class="prog-fill" id="dot-fill" style="width:0%"></div></div>
+      </div>
+      <div class="prog-row">
+        <div class="prog-label"><span>50+ Score innings</span><span id="half-pct">0%</span></div>
+        <div class="prog-bar"><div class="prog-fill" id="half-fill" style="width:0%"></div></div>
+      </div>
+      <div class="prog-row">
+        <div class="prog-label"><span>Not Out %</span><span id="no-pct">0%</span></div>
+        <div class="prog-bar"><div class="prog-fill gold" id="no-fill" style="width:0%"></div></div>
+      </div>
+    </div>
+    <div class="insight-card">
+      <h4>📊 Batting Breakdown</h4>
+      <div class="insight-row"><span>Total Balls Faced</span><span id="bi-balls">—</span></div>
+      <div class="insight-row"><span>Total 4s + 6s</span><span id="bi-bdry">—</span></div>
+      <div class="insight-row"><span>Runs from Boundaries</span><span id="bi-bdry-runs">—</span></div>
+      <div class="insight-row"><span>Not Outs</span><span id="bi-no">—</span></div>
+      <div class="insight-row"><span>50s / 100s</span><span id="bi-miles">—</span></div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ═══════════ BOWLING ═══════════ -->
+<section id="bowling">
+  <h2 class="section-heading fade-up">Bowling <span>Stats</span></h2>
+  <div class="bowling-highlight fade-up">
+    <div>
+      <div class="big-fig" id="bl-best-fig">0/0</div>
+      <div class="fig-label">Best Figures</div>
+    </div>
+    <div style="flex:1">
+      <div class="fig-desc" id="bl-best-desc">Aaj tak ki sabse achhi bowling performance.</div>
+    </div>
+  </div>
+  <div class="stats-grid fade-up">
+    <div class="stat-card"><div class="val" id="bl-wickets">0</div><div class="lbl">Wickets</div></div>
+    <div class="stat-card"><div class="val" id="bl-overs">0</div><div class="lbl">Overs</div></div>
+    <div class="stat-card"><div class="val gold" id="bl-econ">0.0</div><div class="lbl">Economy</div></div>
+    <div class="stat-card"><div class="val" id="bl-avg">0.0</div><div class="lbl">Average</div></div>
+    <div class="stat-card"><div class="val" id="bl-sr">0.0</div><div class="lbl">Strike Rate</div></div>
+    <div class="stat-card"><div class="val" id="bl-maidens">0</div><div class="lbl">Maidens</div></div>
+    <div class="stat-card"><div class="val gold" id="bl-4wkt">0</div><div class="lbl">4-Wicket Hauls</div></div>
+    <div class="stat-card"><div class="val" id="bl-runs-c">0</div><div class="lbl">Runs Conceded</div></div>
+  </div>
+  <div class="bowling-grid fade-up">
+    <div class="progress-block">
+      <div class="prog-row">
+        <div class="prog-label"><span>Maiden Over %</span><span id="maiden-pct">0%</span></div>
+        <div class="prog-bar"><div class="prog-fill" id="maiden-fill" style="width:0%"></div></div>
+      </div>
+      <div class="prog-row">
+        <div class="prog-label"><span>4+ Wicket Haul matches</span><span id="fwkt-pct">0%</span></div>
+        <div class="prog-bar"><div class="prog-fill gold" id="fwkt-fill" style="width:0%"></div></div>
+      </div>
+    </div>
+    <div class="insight-card">
+      <h4>🎯 Bowling Breakdown</h4>
+      <div class="insight-row"><span>Total Balls Bowled</span><span id="bli-balls">—</span></div>
+      <div class="insight-row"><span>Runs per Wicket</span><span id="bli-rpw">—</span></div>
+      <div class="insight-row"><span>Balls per Wicket</span><span id="bli-bpw">—</span></div>
+      <div class="insight-row"><span>4-Wicket Hauls</span><span id="bli-4wkt">—</span></div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ═══════════ FIELDING ═══════════ -->
+<section id="fielding">
+  <h2 class="section-heading fade-up">Fielding <span>Stats</span></h2>
+  <div class="fielding-grid fade-up">
+    <div class="field-card">
+      <div class="field-icon">🤲</div>
+      <div class="field-info"><div class="val" id="f-catches">0</div><div class="lbl">Catches</div></div>
+    </div>
+    <div class="field-card">
+      <div class="field-icon">🏃</div>
+      <div class="field-info"><div class="val" id="f-runouts">0</div><div class="lbl">Run Outs</div></div>
+    </div>
+    <div class="field-card">
+      <div class="field-icon">🎯</div>
+      <div class="field-info"><div class="val" id="f-direct">0</div><div class="lbl">Direct Hits</div></div>
+    </div>
+    <div class="field-card">
+      <div class="field-icon">🧤</div>
+      <div class="field-info"><div class="val" id="f-stumpings">0</div><div class="lbl">Stumpings</div></div>
+    </div>
+    <div class="field-card">
+      <div class="field-icon">⭐</div>
+      <div class="field-info"><div class="val" id="f-total">0</div><div class="lbl">Total Dismissals</div></div>
+    </div>
+    <div class="field-card">
+      <div class="field-icon">📊</div>
+      <div class="field-info"><div class="val" id="f-per-match">0.0</div><div class="lbl">Per Match</div></div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ═══════════ MATCH HISTORY ═══════════ -->
+<section id="matches">
+  <h2 class="section-heading fade-up">Match <span>History</span></h2>
+  <div class="matches-table-wrap fade-up">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Date</th>
+          <th>Opponent</th>
+          <th>Format</th>
+          <th>Runs</th>
+          <th>Balls</th>
+          <th>4s</th>
+          <th>6s</th>
+          <th>Wickets</th>
+          <th>Overs</th>
+          <th>Economy</th>
+          <th>Catches</th>
+        </tr>
+      </thead>
+      <tbody id="matchTbody">
+        <tr><td colspan="12" style="text-align:center; color:var(--muted); padding:32px;">Koi match data nahi — neeche add karo ya sync karo.</td></tr>
+      </tbody>
+    </table>
+  </div>
+ 
+  <!-- MANUAL ADD FORM -->
+  <div class="add-match-form fade-up">
+    <h3>➕ Match Manually Add Karo</h3>
+    <div class="form-grid">
+      <div class="form-group"><label>Opponent</label><input id="f-opp" placeholder="Team ka naam"></div>
+      <div class="form-group"><label>Date</label><input id="f-date" type="date"></div>
+      <div class="form-group"><label>Format</label>
+        <select id="f-format"><option>T20</option><option>ODI</option><option>T10</option><option>Other</option></select>
+      </div>
+      <div class="form-group"><label>Runs</label><input id="f-runs" type="number" placeholder="0" min="0"></div>
+      <div class="form-group"><label>Balls Faced</label><input id="f-balls" type="number" placeholder="0" min="0"></div>
+      <div class="form-group"><label>Fours (4s)</label><input id="f-fours" type="number" placeholder="0" min="0"></div>
+      <div class="form-group"><label>Sixes (6s)</label><input id="f-sixes" type="number" placeholder="0" min="0"></div>
+      <div class="form-group"><label>Wickets</label><input id="f-wickets" type="number" placeholder="0" min="0"></div>
+      <div class="form-group"><label>Overs Bowled</label><input id="f-overs" type="number" placeholder="0" min="0" step="0.1"></div>
+      <div class="form-group"><label>Runs Conceded</label><input id="f-rc" type="number" placeholder="0" min="0"></div>
+      <div class="form-group"><label>Maidens</label><input id="f-maidens" type="number" placeholder="0" min="0"></div>
+      <div class="form-group"><label>Catches/Runouts</label><input id="f-catches-inp" type="number" placeholder="0" min="0"></div>
+    </div>
+    <button class="btn-add" onclick="addMatch()">Match Add Karo ✓</button>
+  </div>
+</section>
+ 
+<!-- ═══════════ ABOUT ═══════════ -->
+<section id="about">
+  <h2 class="section-heading fade-up">About <span>Me</span></h2>
+  <div class="about-inner fade-up">
+    <div class="about-card">
+      <div class="about-avatar">PST</div>
+      <h3>P.S. Thakur</h3>
+      <p>Faridabad, Haryana · Player ID: 32203638</p>
+      <div class="about-badges">
+        <span class="about-badge">Fast Bowler</span>
+        <span class="about-badge">Right-hand Bat</span>
+        <span class="about-badge">Since 2024</span>
+      </div>
+      <div class="about-links">
+        <a href="https://cricheroes.com/player-profile/32203638/p.s-thakur/matches" target="_blank" class="about-link">
+          🏏 CricHeroes Profile
+        </a>
+        <a href="https://github.com/priyanshu7417" target="_blank" class="about-link">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="https://wa.me/917417523892" target="_blank" class="about-link">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="https://www.instagram.com/thakur_priyanshu.2004/" target="_blank" class="about-link">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+      </div>
+    </div>
+    <div class="about-text">
+      <p>
+        Hello! Main hoon <strong>Priyanshu Singh Thakur</strong> — Faridabad, Haryana se ek passionate cricketer aur web developer. Cricket mein meri shuruat 2024 mein hui aur tab se main continuously improve kar raha hun.
+      </p>
+      <p>
+        Main ek <strong>right-arm fast bowler</strong> hoon jo apni pace aur swing se batsmen ko mushkil mein daalta hai. Batting mein bhi main aggressive approach rakhta hun — especially power hitting mere strong points hain.
+      </p>
+      <p>
+        Fielding mein main alert aur agile rehta hun — catching aur direct throws meri specialty hai. Team ke liye contribute karna — chahe woh bowling ho, batting ho ya fielding — mera goal hai.
+      </p>
+      <div class="about-highlight">
+        💡 "Cricket sirf ek game nahi hai — yeh dedication, discipline aur team spirit ka naam hai. Main har match se kuch naya seekhta hun."
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ═══════════ CONTACT ═══════════ -->
+<section id="contact">
+  <h2 class="section-heading fade-up">Get In <span>Touch</span></h2>
+  <div class="contact-grid fade-up">
+    <div class="contact-card">
+      <h3>Let's Connect! 🤝</h3>
+      <p>Cricket collaboration, team selection, ya bas baat karna chahte ho? Main available hun!</p>
+      <div class="contact-links">
+        <a href="mailto:priyanshu741752@gmail.com" class="contact-link">
+          <i class="fas fa-envelope"></i> priyanshu741752@gmail.com
+        </a>
+        <a href="tel:+917417523892" class="contact-link">
+          <i class="fas fa-phone"></i> +91 74175 23892
+        </a>
+        <a href="https://wa.me/917417523892" target="_blank" class="contact-link">
+          <i class="fab fa-whatsapp"></i> WhatsApp karo
+        </a>
+        <a href="https://www.linkedin.com/in/priyanshu-piyush-8a5292286/" target="_blank" class="contact-link">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+      </div>
+    </div>
+    <div class="contact-card">
+      <h3>Social Media 📱</h3>
+      <p>Follow karo aur cricket journey ke saath updated raho!</p>
+      <div class="social-grid">
+        <a href="https://www.instagram.com/thakur_priyanshu.2004/" target="_blank" class="social-btn">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://www.facebook.com/psdadathakur.singh" target="_blank" class="social-btn">
+          <i class="fab fa-facebook"></i> Facebook
+        </a>
+        <a href="https://github.com/priyanshu7417" target="_blank" class="social-btn">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="https://cricheroes.com/player-profile/32203638/p.s-thakur/matches" target="_blank" class="social-btn">
+          🏏 CricHeroes
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <h2>P.S. <span>Thakur</span></h2>
+      <p>Ek passionate cricketer aur developer — Faridabad se. Cricket, Code, aur Commitment — yahi meri pehchaan hai.</p>
+      <div style="margin-top:16px" class="footer-socials">
+        <a href="https://www.facebook.com/psdadathakur.singh" target="_blank" class="footer-social-btn"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/thakur_priyanshu.2004/" target="_blank" class="footer-social-btn"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/priyanshu-piyush-8a5292286/" target="_blank" class="footer-social-btn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/priyanshu7417" target="_blank" class="footer-social-btn"><i class="fab fa-github"></i></a>
+        <a href="https://cricheroes.com/player-profile/32203638/p.s-thakur/matches" target="_blank" class="footer-social-btn">🏏</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#batting">Batting</a></li>
+        <li><a href="#bowling">Bowling</a></li>
+        <li><a href="#fielding">Fielding</a></li>
+        <li><a href="#matches">Matches</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Help Center</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Follow</h4>
+      <ul>
+        <li><a href="https://www.instagram.com/thakur_priyanshu.2004/" target="_blank">Instagram</a></li>
+        <li><a href="https://www.facebook.com/psdadathakur.singh" target="_blank">Facebook</a></li>
+        <li><a href="https://www.linkedin.com/in/priyanshu-piyush-8a5292286/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://cricheroes.com/player-profile/32203638/p.s-thakur/matches" target="_blank">CricHeroes</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 P.S. Thakur. Sab rights reserved.</p>
+    <div>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Cookies</a>
+    </div>
+  </div>
+</footer>
+</body>
+<script src="script.js"></script>
+</html>
